@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Employee extends Model
 {
-    protected $fillable = ['id', 'payroll_number', 'name', 'mobile'];
+    protected $fillable = ['payroll_number', 'name', 'mobile'];
 
     // Many-to-Many: An Employee can provide many Services (via ServicesProvided)
     public function services()

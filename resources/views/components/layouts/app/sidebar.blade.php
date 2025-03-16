@@ -14,12 +14,25 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+
+                    <flux:navlist.item icon="user" :href="route('employees.index')" :current="request()->routeIs('employees.index')" wire:navigate>{{ __('Employees') }}</flux:navlist.item>
+
+                    <flux:navlist.item icon="user" :href="route('clients.index')" :current="request()->routeIs('clients.index')" wire:navigate>{{ __('Clients') }}</flux:navlist.item>
+
+                    <flux:navlist.item icon="signal" :href="route('services.index')" :current="request()->routeIs('services.index')" wire:navigate>{{ __('Services') }}</flux:navlist.item>
+
+                    <flux:navlist.item icon="calendar" :href="route('invoices.index')" :current="request()->routeIs('invoices.index')" wire:navigate>{{ __('Invoices') }}</flux:navlist.item>
+                    <flux:navlist.item icon="calendar" :href="route('client-appointments.index')" :current="request()->routeIs('client-appointments.index')" wire:navigate>{{ __('Client Appointments') }}</flux:navlist.item>
+
+                    <flux:navlist.item icon="calendar" :href="route('services-provided.index')" :current="request()->routeIs('services-provided.index')" wire:navigate>{{ __('Services Provided') }}</flux:navlist.item>
+
+                    <flux:navlist.item icon="calendar" :href="route('invoice-rows.index')" :current="request()->routeIs('invoice-rows.index')" wire:navigate>{{ __('Invoice Rows') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
             <flux:spacer />
 
-            <flux:navlist variant="outline">
+            {{-- <flux:navlist variant="outline">
                 <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
                 {{ __('Repository') }}
                 </flux:navlist.item>
@@ -27,7 +40,7 @@
                 <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits" target="_blank">
                 {{ __('Documentation') }}
                 </flux:navlist.item>
-            </flux:navlist>
+            </flux:navlist> --}}
 
             <!-- Desktop User Menu -->
             <flux:dropdown position="bottom" align="start">
